@@ -1,0 +1,11 @@
+{
+  "name": "human-pass-seo-cleanup-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Quick POC for AI-assisted SEO/CRO content cleanup from a LinkedIn job spec.",
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "serve": "python -m http.server 4173",
+    "test": "node tests/analyzer.test.js"
+  }
+}

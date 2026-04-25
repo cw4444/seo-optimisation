@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human Pass | AI Snack Cleanup POC</title>
+    <meta name="description" content="AI-assisted SEO and CRO content cleanup workbench for removing obvious AI snack copy." />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead" aria-label="Human Pass header">
+        <a class="brand" href="#top" aria-label="Human Pass home">
+          <span class="brand-mark">HP</span>
+          <span>Human Pass</span>
+        </a>
+        <p class="tagline">AI-assisted SEO/CRO content cleanup workbench</p>
+        <nav class="nav-actions" aria-label="Utility navigation">
+          <button class="ghost-button" type="button" data-load-sample>Load sample</button>
+          <button class="ghost-button" type="button" data-clear>Clear</button>
+        </nav>
+      </header>
+
+      <section class="hero" id="top">
+        <div>
+          <p class="eyebrow">Built from the Website SEO Optimisation Executive brief</p>
+          <h1>Cleaner content. Happier readers. <span>Less AI snack.</span></h1>
+          <p class="lede">Paste copy or HTML, catch the obvious fluffy bits, tighten SEO basics, and hand the final judgement to one human plus one AI for vibes.</p>
+        </div>
+        <div class="hero-card" aria-label="Workflow summary">
+          <strong>POC automation</strong>
+          <span>Detect -> Rewrite -> Review -> Export</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Content cleanup workspace">
+        <article class="panel input-panel">
+          <div class="panel-head">
+            <div>
+              <span class="step">1</span>
+              <h2>Paste / Input</h2>
+              <p>Drop in landing page copy, blog text, or rough HTML.</p>
+            </div>
+            <output class="word-count" data-word-count>0 words</output>
+          </div>
+          <label class="sr-only" for="sourceText">Source content</label>
+          <textarea id="sourceText" spellcheck="true" data-source></textarea>
+          <div class="toolbar">
+            <label>
+              Page intent
+              <select data-intent>
+                <option value="general">General audience</option>
+                <option value="conversion">Conversion page</option>
+                <option value="seo">SEO article</option>
+                <option value="product">Product page</option>
+              </select>
+            </label>
+            <label>
+              Brand voice
+              <select data-voice>
+                <option value="plain">Plain English</option>
+                <option value="confident">Confident</option>
+                <option value="warm">Warm expert</option>
+              </select>
+            </label>
+            <button class="primary-button" type="button" data-analyze>Analyze content</button>
+          </div>
+        </article>
+
+        <aside class="panel insights-panel" aria-label="Analysis insights">
+          <div class="panel-head dark">
+            <div>
+              <span class="step">2</span>
+              <h2>Insights</h2>
+              <p>AI-snack, SEO, clarity, and CRO signals.</p>
+            </div>
+          </div>
+          <div class="score-grid" data-scores></div>
+          <div class="issue-list" data-issues></div>
+        </aside>
+      </section>
+
+      <section class="result-grid">
+        <article class="panel output-panel">
+          <div class="panel-head dark">
+            <div>
+              <span class="step">3</span>
+              <h2>Rewritten Output</h2>
+              <p>Suggested cleanup. Still needs a human pass.</p>
+            </div>
+            <button class="ghost-button light" type="button" data-copy>Copy</button>
+          </div>
+          <div class="output-body" data-output aria-live="polite"></div>
+          <div class="export-row">
+            <output data-output-count>0 words</output>
+            <button class="primary-button" type="button" data-download>Download Markdown</button>
+          </div>
+        </article>
+
+        <aside class="panel checklist-panel">
+          <div class="check-head">
+            <div>
+              <h2>Human Review Checklist</h2>
+              <p>Keep the useful automation. Remove the cursed smoothie texture.</p>
+            </div>
+            <output data-check-count>0 / 6</output>
+          </div>
+          <div class="checks" data-checks></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./src/analyzer.js"></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
